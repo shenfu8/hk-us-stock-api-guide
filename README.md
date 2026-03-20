@@ -1,9 +1,9 @@
 # hk-us-stock-api-guide
 
-港美股实时行情与K线数据接口说明
+港美股实时行情与历史K线数据接口说明
 
 ## 项目定位
-本仓库聚焦「港股API」接入落地，面向以下场景：
+本仓库聚焦「美股港股K线API」接入落地，面向以下场景：
 - 量化交易策略实时订阅与告警
 - 行情看板与交易终端前端展示
 - 研究系统历史 K 线回测与因子验证
@@ -34,6 +34,11 @@
 完整与最新清单请以官方页面为准：
 - [https://kun.pro/products](https://kun.pro/products)
 
+## 本仓库重点市场
+- 主区域：跨市场
+- 重点国家/市场：中国香港(HK)、美国(US)
+- 重点交易所：HKEX、NASDAQ、NYSE
+
 ## Quick Start
 1. 获取访问 Token 并确认鉴权方式
 2. 选择接入方式（WebSocket 或 REST）
@@ -42,21 +47,22 @@
 
 ## 最小请求示例
 ### REST 示例（历史 K 线）
-<code>GET https://kun.pro/api/history?market=KR&symbol=KRX:000040&interval=1&count=200</code>
+<code>GET https://kun.pro/api/history?market=US&symbol=NASDAQ:AAPL&interval=1&count=200</code>
 <code>Authorization: Bearer YOUR_TOKEN</code>
 
 ### WebSocket 示例（实时订阅）
 <code>wss://kun.pro/ws?token=YOUR_TOKEN</code>
-<code>{"action":"subscribe","market":"KR","symbol":"KRX:000040"}</code>
+<code>{"action":"subscribe","market":"US","symbol":"NASDAQ:AAPL"}</code>
 
 ## 关键词与主题
-- keyword: 港股API
-- topics:hk-stocks-api, us-stocks-api, kline, history-api
+- keyword: 美股港股K线API
+- topics:hk-stocks-api, us-stocks-api, kline, history-api, us-market
 
 ## 文档与接入
 - 开发文档中心：[https://kun.pro/docs.html](https://kun.pro/docs.html)
 - 官网入口：[https://kun.pro](https://kun.pro?utm_campaign=kun_pro_api_seo&utm_content=shenfu8_hk-us-stock-api-guide&utm_medium=readme&utm_source=github)
 - 接入咨询：请通过官网页面提交需求（支持 API 评估与接入建议）
+- Telegram：[@kunpeng](https://t.me/kunpeng)
 
 ## 推荐关键词（站点统一）
 - 鯤鵬數據 API
